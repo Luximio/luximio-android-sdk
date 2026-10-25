@@ -1,0 +1,242 @@
+{
+  "version": 1,
+  "origin": "https://customer-play-wire.links.example.com",
+  "now": 1800000000123,
+  "bearer": "ERERERERERERERERERERERERERERERERERERERERERE",
+  "androidPackageName": "app.example.customer",
+  "create": {
+    "version": 1,
+    "scope": {
+      "projectID": "project_customer_play_wire_v1",
+      "channel": "play_install_referrer"
+    },
+    "invocation": {
+      "id": "11111111-1111-4111-8111-111111111111",
+      "operationID": "22222222-2222-4222-8222-222222222222",
+      "originalURL": "https://customer-play-wire.links.example.com/catalog/item?utm_source=clip%20demo&context=a%2Fb&context=%F0%9F%8E%9F%EF%B8%8F&quote=%22&escaped=%5C&plus=a+b&empty=",
+      "capturedAt": 1800000000123,
+      "expiresAt": 1800604800123
+    }
+  },
+  "resolve": {
+    "version": 1,
+    "scope": {
+      "projectID": "project_customer_play_wire_v1",
+      "channel": "play_install_referrer"
+    },
+    "receiptID": "33333333-3333-4333-8333-333333333333",
+    "deliveryID": "44444444-4444-4444-8444-444444444444"
+  },
+  "resolveUnpinned": {
+    "version": 1,
+    "scope": {
+      "projectID": "project_customer_play_wire_v1",
+      "channel": "play_install_referrer"
+    }
+  },
+  "acknowledge": {
+    "version": 1,
+    "scope": {
+      "projectID": "project_customer_play_wire_v1",
+      "channel": "play_install_referrer"
+    },
+    "receiptID": "33333333-3333-4333-8333-333333333333",
+    "deliveryID": "44444444-4444-4444-8444-444444444444",
+    "operationID": "55555555-5555-4555-8555-555555555555",
+    "outcome": "applied"
+  },
+  "prepared": {
+    "version": 1,
+    "result": "prepared",
+    "receipt": {
+      "id": "33333333-3333-4333-8333-333333333333",
+      "deliveryID": "44444444-4444-4444-8444-444444444444",
+      "scope": {
+        "projectID": "project_customer_play_wire_v1",
+        "channel": "play_install_referrer"
+      },
+      "invocation": {
+        "id": "11111111-1111-4111-8111-111111111111",
+        "operationID": "22222222-2222-4222-8222-222222222222",
+        "originalURL": "https://customer-play-wire.links.example.com/catalog/item?utm_source=clip%20demo&context=a%2Fb&context=%F0%9F%8E%9F%EF%B8%8F&quote=%22&escaped=%5C&plus=a+b&empty=",
+        "capturedAt": 1800000000123,
+        "expiresAt": 1800604800123
+      },
+      "canonicalLinkID": "link:customer.play/v1",
+      "destination": {
+        "route": "/catalog/item.v2",
+        "data": {
+          "itemID": "42",
+          "title": "Canal café 🎟️",
+          "message": "Quote: \" slash: / backslash: \\ newline:\nseparator: paragraph: ",
+          "optional": null,
+          "nested": {
+            "enabled": true,
+            "value": 0.125
+          }
+        }
+      },
+      "expiresAt": 1800604800123
+    }
+  },
+  "acknowledged": {
+    "version": 1,
+    "result": "acknowledged",
+    "receiptID": "33333333-3333-4333-8333-333333333333",
+    "deliveryID": "44444444-4444-4444-8444-444444444444",
+    "operationID": "55555555-5555-4555-8555-555555555555",
+    "outcome": "applied"
+  },
+  "binding": {
+    "version": 1,
+    "challengeID": "66666666-6666-4666-8666-666666666666",
+    "challenge": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "projectID": "project_customer_play_wire_v1",
+    "hostname": "customer-play-wire.links.example.com",
+    "channel": "play_install_referrer",
+    "identityHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "origin": "https://customer-play-wire.links.example.com",
+    "method": "POST",
+    "path": "/api/v1/recovery/resolve",
+    "purpose": "resolve",
+    "payloadHash": "7892ce4709f501f065469437875ac4953f98598a1b4624803c1613e560519c88",
+    "tokenHash": "b59e65c402a629e6c5b28355c7628a1002262b55b43a52f941c02740e3bdfafc",
+    "createdAt": 1800000000123,
+    "expiresAt": 1800000300123
+  },
+  "challenge": {
+    "version": 1,
+    "result": "challenge",
+    "challengeID": "66666666-6666-4666-8666-666666666666",
+    "challenge": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "clientData": "eyJjaGFsbGVuZ2UiOiJBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBIiwiY2hhbGxlbmdlSUQiOiI2NjY2NjY2Ni02NjY2LTQ2NjYtODY2Ni02NjY2NjY2NjY2NjYiLCJjaGFubmVsIjoicGxheV9pbnN0YWxsX3JlZmVycmVyIiwiY3JlYXRlZEF0IjoxODAwMDAwMDAwMTIzLCJleHBpcmVzQXQiOjE4MDAwMDAzMDAxMjMsImhvc3RuYW1lIjoiY3VzdG9tZXItcGxheS13aXJlLmxpbmtzLmV4YW1wbGUuY29tIiwiaWRlbnRpdHlIYXNoIjoiYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYSIsIm1ldGhvZCI6IlBPU1QiLCJvcmlnaW4iOiJodHRwczovL2N1c3RvbWVyLXBsYXktd2lyZS5saW5rcy5leGFtcGxlLmNvbSIsInBhdGgiOiIvYXBpL3YxL3JlY292ZXJ5L3Jlc29sdmUiLCJwYXlsb2FkSGFzaCI6Ijc4OTJjZTQ3MDlmNTAxZjA2NTQ2OTQzNzg3NWFjNDk1M2Y5ODU5OGExYjQ2MjQ4MDNjMTYxM2U1NjA1MTljODgiLCJwcm9qZWN0SUQiOiJwcm9qZWN0X2N1c3RvbWVyX3BsYXlfd2lyZV92MSIsInB1cnBvc2UiOiJyZXNvbHZlIiwidG9rZW5IYXNoIjoiYjU5ZTY1YzQwMmE2MjllNmM1YjI4MzU1Yzc2MjhhMTAwMjI2MmI1NWI0M2E1MmY5NDFjMDI3NDBlM2JkZmFmYyIsInZlcnNpb24iOjF9",
+    "expiresAt": 1800000300123
+  },
+  "requestHash": "nqoomO4P1Q8SkXSn2u6YP85W3W428zQsuWuAKvWZG6Q",
+  "canonicalCases": [
+    {
+      "name": "create",
+      "payload": {
+        "version": 1,
+        "scope": {
+          "projectID": "project_customer_play_wire_v1",
+          "channel": "play_install_referrer"
+        },
+        "invocation": {
+          "id": "11111111-1111-4111-8111-111111111111",
+          "operationID": "22222222-2222-4222-8222-222222222222",
+          "originalURL": "https://customer-play-wire.links.example.com/catalog/item?utm_source=clip%20demo&context=a%2Fb&context=%F0%9F%8E%9F%EF%B8%8F&quote=%22&escaped=%5C&plus=a+b&empty=",
+          "capturedAt": 1800000000123,
+          "expiresAt": 1800604800123
+        }
+      },
+      "canonical": "{\"invocation\":{\"capturedAt\":1800000000123,\"expiresAt\":1800604800123,\"id\":\"11111111-1111-4111-8111-111111111111\",\"operationID\":\"22222222-2222-4222-8222-222222222222\",\"originalURL\":\"https://customer-play-wire.links.example.com/catalog/item?utm_source=clip%20demo&context=a%2Fb&context=%F0%9F%8E%9F%EF%B8%8F&quote=%22&escaped=%5C&plus=a+b&empty=\"},\"scope\":{\"channel\":\"play_install_referrer\",\"projectID\":\"project_customer_play_wire_v1\"},\"version\":1}",
+      "sha256": "e6ee45b06ddfdfb80147c8a8dc59c923bd2db4d9029a176051babe6fc9c34ccc"
+    },
+    {
+      "name": "resolve",
+      "payload": {
+        "version": 1,
+        "scope": {
+          "projectID": "project_customer_play_wire_v1",
+          "channel": "play_install_referrer"
+        },
+        "receiptID": "33333333-3333-4333-8333-333333333333",
+        "deliveryID": "44444444-4444-4444-8444-444444444444"
+      },
+      "canonical": "{\"deliveryID\":\"44444444-4444-4444-8444-444444444444\",\"receiptID\":\"33333333-3333-4333-8333-333333333333\",\"scope\":{\"channel\":\"play_install_referrer\",\"projectID\":\"project_customer_play_wire_v1\"},\"version\":1}",
+      "sha256": "b79fe7e64f61d3422db72ab6b5b6764b07966fe36f0ace73aa49bcd833339fc5"
+    },
+    {
+      "name": "resolve-unpinned",
+      "payload": {
+        "version": 1,
+        "scope": {
+          "projectID": "project_customer_play_wire_v1",
+          "channel": "play_install_referrer"
+        }
+      },
+      "canonical": "{\"scope\":{\"channel\":\"play_install_referrer\",\"projectID\":\"project_customer_play_wire_v1\"},\"version\":1}",
+      "sha256": "7892ce4709f501f065469437875ac4953f98598a1b4624803c1613e560519c88"
+    },
+    {
+      "name": "acknowledge",
+      "payload": {
+        "version": 1,
+        "scope": {
+          "projectID": "project_customer_play_wire_v1",
+          "channel": "play_install_referrer"
+        },
+        "receiptID": "33333333-3333-4333-8333-333333333333",
+        "deliveryID": "44444444-4444-4444-8444-444444444444",
+        "operationID": "55555555-5555-4555-8555-555555555555",
+        "outcome": "applied"
+      },
+      "canonical": "{\"deliveryID\":\"44444444-4444-4444-8444-444444444444\",\"operationID\":\"55555555-5555-4555-8555-555555555555\",\"outcome\":\"applied\",\"receiptID\":\"33333333-3333-4333-8333-333333333333\",\"scope\":{\"channel\":\"play_install_referrer\",\"projectID\":\"project_customer_play_wire_v1\"},\"version\":1}",
+      "sha256": "e2a626ecd106688145c9303259265e2724cd56f3124b66152818b54ee0f04810"
+    },
+    {
+      "name": "utf16-key-order",
+      "payload": {
+        "": "private-use",
+        "😀": "emoji",
+        "a": "ascii",
+        "é": "accent"
+      },
+      "canonical": "{\"a\":\"ascii\",\"é\":\"accent\",\"😀\":\"emoji\",\"\":\"private-use\"}",
+      "sha256": "ab478b7abb754c9a918a96fae73b70815386726b0f9b2abd23d89fdfe3442a96"
+    },
+    {
+      "name": "unicode-and-string-escapes",
+      "payload": {
+        "text": "café é 🎟️ 😀 / \" \\ \u0000\b\f\n\r\t\u001f  ",
+        "empty": "",
+        "optional": null
+      },
+      "canonical": "{\"empty\":\"\",\"optional\":null,\"text\":\"café é 🎟️ 😀 / \\\" \\\\ \\u0000\\b\\f\\n\\r\\t\\u001f  \"}",
+      "sha256": "9f0084a2cfa031c9e06acfcd15b9f9927a7ff3d783d3cd27f2e0320e07fb948b"
+    },
+    {
+      "name": "safe-integers",
+      "payload": {
+        "maximum": 9007199254740991,
+        "minimum": -9007199254740991,
+        "zero": 0
+      },
+      "canonical": "{\"maximum\":9007199254740991,\"minimum\":-9007199254740991,\"zero\":0}",
+      "sha256": "6c2ebfc38ada26e6c5cac0887ce0571e3fe2bdd108725e1364e1dc23b6cfd0e0"
+    },
+    {
+      "name": "lone-surrogates",
+      "payload": {
+        "\ud800": "high:\ud800",
+        "low": "low:\udc00",
+        "pair": "pair:😀"
+      },
+      "canonical": "{\"low\":\"low:\\udc00\",\"pair\":\"pair:😀\",\"\\ud800\":\"high:\\ud800\"}",
+      "sha256": "1b1e363e08e9cea437b0fc5d051b58c5f5ecef689d1144dc50ca9771b66f865c"
+    },
+    {
+      "name": "challenge-binding",
+      "payload": {
+        "version": 1,
+        "challengeID": "66666666-6666-4666-8666-666666666666",
+        "challenge": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "projectID": "project_customer_play_wire_v1",
+        "hostname": "customer-play-wire.links.example.com",
+        "channel": "play_install_referrer",
+        "identityHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "origin": "https://customer-play-wire.links.example.com",
+        "method": "POST",
+        "path": "/api/v1/recovery/resolve",
+        "purpose": "resolve",
+        "payloadHash": "7892ce4709f501f065469437875ac4953f98598a1b4624803c1613e560519c88",
+        "tokenHash": "b59e65c402a629e6c5b28355c7628a1002262b55b43a52f941c02740e3bdfafc",
+        "createdAt": 1800000000123,
+        "expiresAt": 1800000300123
+      },
+      "canonical": "{\"challenge\":\"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\",\"challengeID\":\"66666666-6666-4666-8666-666666666666\",\"channel\":\"play_install_referrer\",\"createdAt\":1800000000123,\"expiresAt\":1800000300123,\"hostname\":\"customer-play-wire.links.example.com\",\"identityHash\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"method\":\"POST\",\"origin\":\"https://customer-play-wire.links.example.com\",\"path\":\"/api/v1/recovery/resolve\",\"payloadHash\":\"7892ce4709f501f065469437875ac4953f98598a1b4624803c1613e560519c88\",\"projectID\":\"project_customer_play_wire_v1\",\"purpose\":\"resolve\",\"tokenHash\":\"b59e65c402a629e6c5b28355c7628a1002262b55b43a52f941c02740e3bdfafc\",\"version\":1}",
+      "sha256": "9eaa2898ee0fd50f129174a7daee983fce56dd6e36f3342cb96b802af5991ba4"
+    }
+  ]
+}

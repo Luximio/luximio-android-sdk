@@ -1,0 +1,44 @@
+name: Build SDK
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash --noprofile --norc -euo pipefail {0}
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out SDK
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up JDK 25
+        uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
+        with:
+          distribution: temurin
+          java-version: '25'
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@3f5f9adaf7d9fecd50b5935e54106014257a94e6 # v6.4.0
+        with:
+          cache-provider: basic
+          cache-disabled: true
+          dependency-graph: disabled
+          build-scan-publish: false
+          validate-wrappers: true
+      - name: Show Java toolchain
+        run: java --version
+      - name: Install Android SDK components
+        run: sdkmanager --install 'platforms;android-37.0' 'build-tools;37.0.0'
+      - name: Test and build SDK
+        run: ./gradlew --no-daemon testDebugUnitTest lintRelease assembleRelease sourceReleaseJar

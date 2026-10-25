@@ -1,0 +1,89 @@
+{
+  "note": "Synthetic codec fixture only. The all-A bearer is a placeholder, never a deployed credential. Tests use a fixed clock; runtime fixture creates fresh dates.",
+  "origin": "https://sdk-ticketdesk-android.luximio.app",
+  "bearerToken": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+  "referrer": "lx_v=1&lx_token=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+  "prepareRequest": {
+    "version": 1,
+    "invocation": {
+      "id": "10000000-0000-4000-8000-000000000001",
+      "operationID": "20000000-0000-4000-8000-000000000001",
+      "originalURL": "https://sdk-ticketdesk-android.luximio.app/events/aurora-live/schedule?utm_source=prototype_android&utm_campaign=play-referrer-20261017&future_context=survives",
+      "capturedAt": 1792231200000,
+      "expiresAt": 1792836000000,
+      "scope": {
+        "channel": "googlePlay",
+        "projectID": "project_ticketdesk_android_v1",
+        "androidPackageName": "app.luximio.ticketdesk.playprototype"
+      }
+    }
+  },
+  "preparedResponse": {
+    "version": 1,
+    "result": "prepared",
+    "receipt": {
+      "id": "30000000-0000-4000-8000-000000000001",
+      "deliveryID": "40000000-0000-4000-8000-000000000001",
+      "invocation": {
+        "id": "10000000-0000-4000-8000-000000000001",
+        "operationID": "20000000-0000-4000-8000-000000000001",
+        "originalURL": "https://sdk-ticketdesk-android.luximio.app/events/aurora-live/schedule?utm_source=prototype_android&utm_campaign=play-referrer-20261017&future_context=survives",
+        "capturedAt": 1792231200000,
+        "expiresAt": 1792836000000,
+        "scope": {
+          "channel": "googlePlay",
+          "projectID": "project_ticketdesk_android_v1",
+          "androidPackageName": "app.luximio.ticketdesk.playprototype"
+        }
+      },
+      "canonicalLinkID": "ticketdesk_android_aurora_schedule",
+      "destination": {
+        "route": "events/detail",
+        "data": {
+          "eventID": "aurora-live",
+          "section": "schedule"
+        }
+      },
+      "expiresAt": 1792836000000
+    }
+  },
+  "resolveRequest": {
+    "version": 1,
+    "scope": {
+      "channel": "googlePlay",
+      "projectID": "project_ticketdesk_android_v1",
+      "androidPackageName": "app.luximio.ticketdesk.playprototype"
+    }
+  },
+  "pinnedResolveRequest": {
+    "version": 1,
+    "scope": {
+      "channel": "googlePlay",
+      "projectID": "project_ticketdesk_android_v1",
+      "androidPackageName": "app.luximio.ticketdesk.playprototype"
+    },
+    "receiptID": "30000000-0000-4000-8000-000000000001",
+    "deliveryID": "40000000-0000-4000-8000-000000000001"
+  },
+  "acknowledgeRequest": {
+    "version": 1,
+    "scope": {
+      "channel": "googlePlay",
+      "projectID": "project_ticketdesk_android_v1",
+      "androidPackageName": "app.luximio.ticketdesk.playprototype"
+    },
+    "receiptID": "30000000-0000-4000-8000-000000000001",
+    "deliveryID": "40000000-0000-4000-8000-000000000001",
+    "operationID": "50000000-0000-4000-8000-000000000001",
+    "outcome": "applied"
+  },
+  "acknowledgedResponse": {
+    "version": 1,
+    "result": "acknowledged",
+    "receiptID": "30000000-0000-4000-8000-000000000001",
+    "deliveryID": "40000000-0000-4000-8000-000000000001",
+    "operationID": "50000000-0000-4000-8000-000000000001",
+    "outcome": "applied"
+  },
+  "playURL": "https://play.google.com/store/apps/details?id=app.luximio.ticketdesk.playprototype&referrer=lx_v%3D1%26lx_token%3DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+}
