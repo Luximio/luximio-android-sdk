@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "approved": false,
-  "coordinate": null,
-  "sourceSha": null,
-  "manifestSha256": null
+  "approved": true,
+  "coordinate": "app.luximio:luximio-links-android:0.1.0-rc.1",
+  "sourceSha": "fdc4754835b962219180b33d2c6ab9d817278a1b",
+  "manifestSha256": "b60ce9191cfc00fcc4a9b69c4215f7952cef0fa97a7e43920259ae921b93430a"
 }
