@@ -1,6 +1,6 @@
 # Android customer SDK privacy inventory
 
-This inventory covers the private-preview `CustomerPlaySession` adapter. It is
+This inventory covers the `0.1.0-rc.1` candidate's `CustomerPlaySession` adapter. It is
 an input to the consuming app's privacy/Data Safety review, not a submitted
 declaration or a claim that production recovery is enabled. Earlier prototype
 adapters have separate endpoints and retention behavior.
@@ -26,6 +26,25 @@ The complete app and transitive libraries determine merged permissions and
 Google's processing. The SDK does not establish the absence of device data
 merely by omitting an advertising-ID or location permission. Review resolved
 dependencies and the final merged manifest for each release.
+
+## Reference consumer manifest
+
+The candidate's reference consumer resolves the SDK as its only direct runtime
+dependency. Its merged debug and release manifests include
+`android.permission.INTERNET` and
+`com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE`.
+They also include the non-exported AndroidX Startup `InitializationProvider`
+with OkHttp `PlatformInitializer` metadata, the non-exported Play Core
+`PlayCoreDialogWrapperActivity`, AndroidX `CoreComponentFactory`, and Play
+Services version metadata.
+
+These come from the resolved dependency graph; the Luximio AAR itself still
+declares no permission or application component. Dependency startup code is
+separate from calling `CustomerPlaySession`. This inspection does not establish
+the absence of processing by Google, the final app or other libraries. Check
+your own merged manifest, dependency versions, privacy notice and Data Safety
+answers; another app can resolve a different graph. See the exact candidate
+[dependency inventory](dependencies.md).
 
 ## Retention and deletion
 

@@ -1,8 +1,10 @@
 # Android customer recovery integration
 
-This private development preview is available as a [local build](../README.md).
-There is no Maven Central publication, public release or version tag. Customer
-provisioning and production recovery remain disabled.
+Candidate `app.luximio:luximio-links-android:0.1.0-rc.1` is available as a
+[local build](../README.md) while publication is pending. The planned artifact
+host is Luximio's R2 Maven repository; the candidate is not available publicly
+or on Maven Central. Customer provisioning and production recovery remain
+disabled.
 
 ## Prepare the app and server
 

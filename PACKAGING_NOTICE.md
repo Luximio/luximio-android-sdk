@@ -1,6 +1,6 @@
-# Development preview
+# Release candidate 0.1.0-rc.1
 
-This private repository contains the standalone Luximio Android SDK, its
+This unpublished candidate contains the standalone Luximio Android SDK, its
 synthetic tests, manual Build SDK workflow and separate publishing-preparation
 workflow. There is no public SDK release or version tag yet. The only configured
 Gradle publication destination is a local build directory.
@@ -11,6 +11,8 @@ review-docs ZIP, receives no R2 secrets and uploads nothing to R2. The independe
 Python uploader requires explicit manual apply and exact reviewed approval;
 the checked-in approval record is disabled. See [publishing](docs/publishing.md).
 Neither workflow changes SDK runtime behavior or activates recovery service.
+
+Coordinate: `app.luximio:luximio-links-android:0.1.0-rc.1`.
 
 Use `CustomerPlaySession` for customer integration. Earlier prototype adapters
 remain in the library and are not a fallback when native verification fails.

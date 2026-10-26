@@ -1,9 +1,9 @@
 # Luximio Links for Android
 
-**Private development preview.** This repository contains standalone Android
-source for Play install-referrer recovery. There are no public releases or
-version tags yet. APIs and broader runtime support remain provisional; source
-access does not enable the Luximio recovery service.
+**Release candidate `0.1.0-rc.1` — not published.** This repository contains
+standalone Android source for deferred recovery through Google Play Install
+Referrer and Standard Play Integrity. APIs and broader runtime support remain
+provisional; source access does not enable the Luximio recovery service.
 
 The source repository is
 [`Luximio/luximio-android-sdk`](https://github.com/Luximio/luximio-android-sdk).
@@ -21,7 +21,7 @@ configured, run from this repository:
 
 The only configured Gradle publication destination is the local `build/local-maven` directory.
 It contains the AAR, dependency POM, Gradle metadata, sources and review-docs ZIP
-for `app.luximio:luximio-links-android:0.1.0-dev.1`. This development coordinate
+for `app.luximio:luximio-links-android:0.1.0-rc.1`. This candidate coordinate
 does not identify a public version tag or release. The Build SDK workflow is
 started manually from GitHub Actions, uses read-only repository permissions and
 has no release or deployment steps. Importing a workflow does not start a
@@ -45,11 +45,54 @@ dependencyResolutionManagement {
 Then add the dependency to the app module:
 
 ```kotlin
-implementation("app.luximio:luximio-links-android:0.1.0-dev.1")
+implementation("app.luximio:luximio-links-android:0.1.0-rc.1")
 ```
 
 The library compiles for API 26+ with compile SDK 37 and Java 17 bytecode.
 Compilation does not establish runtime coverage across that range.
+
+## Planned public installation
+
+After this exact version has been approved and published, its repository URL
+will be `https://maven.luximio.app`. It requires no download credentials. Until
+then, use the local build above; these instructions do not indicate that a
+public artifact already exists.
+
+```kotlin
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        exclusiveContent {
+            forRepository {
+                maven { url = uri("https://maven.luximio.app") }
+            }
+            filter { includeGroup("app.luximio") }
+        }
+    }
+}
+```
+
+Add the same exact dependency coordinate shown above. This keeps Luximio's
+namespace tied to its own repository without replacing Google/Maven Central
+for ordinary dependencies. Repository access grants no backend entitlement.
+
+## Candidate scope
+
+- Customer integration starts with `CustomerPlaySession`; it composes real
+  Play referrer acquisition, request-bound Standard Play Integrity, HTTPS
+  recovery and an app-private no-backup journal.
+- The app controls onboarding/account readiness and resource authorization.
+  The coordinator supports held recovery, explicit network retry, terminal
+  completion and cancellation before newer manual navigation.
+- Native proof and original campaign context do not establish user identity,
+  private-resource permission or reward/conversion eligibility.
+- Earlier prototype adapters remain in the source but are unsupported customer
+  profiles. Customer verification failures do not fall back to them.
+- Deferred recovery, customer provisioning and setup documentation are not yet
+  enabled on the public service. A public SDK download alone will not enable
+  those features. Follow the [integration](docs/integration.md),
+  [privacy](docs/privacy.md) and [dependency notice](docs/dependencies.md) guides.
 
 ## Publishing preparation
 
@@ -78,8 +121,9 @@ resource permission or trustworthy conversion attribution.
 Review [privacy and retention](docs/privacy.md) against the complete consuming
 app. Earlier prototype adapters in the source are separate profiles, not a
 fallback when customer verification fails. Customer setup screens, authenticated
-guides and production recovery remain disabled. Third-party notice audit,
-public release review and broader device validation remain pending.
+guides and production recovery remain disabled. The resolved dependency review
+is recorded in the dependency guide; whole-app notices, public release approval
+and broader device validation remain release responsibilities.
 
 ## License
 

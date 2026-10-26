@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Validate and stage the standalone Android SDK; no network or credentials.
 
-Only the reviewed development coordinate is supported. The private review ZIP
+Only the reviewed release-candidate coordinate is supported. The private review ZIP
 is checked before staging, then excluded. A staged inventory is rechecked
 against this checkout's source and legal files before any publishing step.
 """
@@ -24,7 +24,7 @@ CONTENT_TYPES = {".aar": "application/java-archive", ".pom": "application/xml",
                  ".module": "application/json", "-sources.jar": "application/java-archive"}
 CACHE_CONTROL = "public, max-age=31536000, immutable"
 
-VERSION = "0.1.0-dev.1"
+VERSION = "0.1.0-rc.1"
 NAME = f"luximio-links-android-{VERSION}"
 COORDINATE = f"app.luximio:luximio-links-android:{VERSION}"
 ANDROID = "{http://schemas.android.com/apk/res/android}"

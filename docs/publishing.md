@@ -2,7 +2,7 @@
 
 The supported installation channel is a Maven repository on Cloudflare R2 at
 `https://maven.luximio.app`. This repository is being prepared for release; the
-SDK remains a private development candidate. A successful build or publication
+SDK remains an unpublished release candidate. A successful build or publication
 plan does not make a version available to customers.
 
 The **Publish Android Maven candidate** workflow is manual. It has no push, tag, pull-request or
@@ -25,8 +25,8 @@ not grant access to the Luximio service.
    artifact hashes. Save the manifest's SHA-256 and the full source commit SHA.
    A manifest is an integrity inventory, not a digital signature.
 
-The initial tooling accepts only the reviewed development coordinate
-`app.luximio:luximio-links-android:0.1.0-dev.1`. A new release version requires
+The current tooling accepts only the release-candidate coordinate
+`app.luximio:luximio-links-android:0.1.0-rc.1`. A new release version requires
 an explicit tooling and source review; changing a workflow input alone cannot
 turn an arbitrary coordinate into an approved release.
 

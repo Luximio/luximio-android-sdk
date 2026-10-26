@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "app.luximio"
-version = "0.1.0-dev.1"
+version = "0.1.0-rc.1"
 
 // Keep one reviewed copy of each notice and include it in binary/source archives.
 abstract class PrepareSdkNotices : DefaultTask() {
@@ -87,8 +87,8 @@ publishing {
         register<MavenPublication>("release") {
             artifactId = "luximio-links-android"
             pom {
-                name.set("Luximio Links Android — private development candidate")
-                description.set("Unreleased Android deferred-link recovery library. Local integration review only.")
+                name.set("Luximio Links Android")
+                description.set("Deferred deep link recovery for Android using Google Play Install Referrer and Play Integrity.")
                 url.set("https://luximio.com")
                 licenses {
                     license {
