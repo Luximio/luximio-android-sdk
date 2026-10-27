@@ -1,9 +1,11 @@
 # Android SDK publishing
 
 The supported installation channel is a Maven repository on Cloudflare R2 at
-`https://maven.luximio.app`. This repository is being prepared for release; the
-SDK remains an unpublished release candidate. A successful build or publication
-plan does not make a version available to customers.
+`https://maven.luximio.app`. Version `0.1.0-rc.1` is published. Its tag preserves the approved source
+`fdc4754835b962219180b33d2c6ab9d817278a1b`; the publishing configuration in a
+later commit pins manifest SHA-256
+`b60ce9191cfc00fcc4a9b69c4215f7952cef0fa97a7e43920259ae921b93430a`.
+A successful plan alone does not publish a version.
 
 The **Publish Android Maven candidate** workflow is manual. It has no push, tag, pull-request or
 scheduled trigger, and defaults to a plan that needs no R2 credential. The
@@ -32,7 +34,8 @@ turn an arbitrary coordinate into an approved release.
 
 ## Approve and publish
 
-The checked-in `scripts/release-approval.json` starts disabled:
+For a future release, start with a disabled `scripts/release-approval.json`
+before recording that new release’s reviewed identity. The initial template is:
 
 ```json
 {

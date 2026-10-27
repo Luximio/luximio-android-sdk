@@ -1,15 +1,16 @@
 # Release candidate 0.1.0-rc.1
 
-This unpublished candidate contains the standalone Luximio Android SDK, its
-synthetic tests, manual Build SDK workflow and separate publishing-preparation
-workflow. There is no public SDK release or version tag yet. The only configured
-Gradle publication destination is a local build directory.
+This public prerelease contains the standalone Luximio Android SDK, its
+synthetic tests and manual build/publishing workflows. The `0.1.0-rc.1` tag
+preserves the reviewed source commit; its Maven artifacts are served from
+`https://maven.luximio.app`. Gradle itself still publishes only to a local build
+directory; the separate restricted uploader handles approved R2 publication.
 
 The default publishing plan transfers and revalidates 20 allowlisted artifact
 and checksum files as a private workflow artifact. It excludes the internal
 review-docs ZIP, receives no R2 secrets and uploads nothing to R2. The independent
 Python uploader requires explicit manual apply and exact reviewed approval;
-the checked-in approval record is disabled. See [publishing](docs/publishing.md).
+the current approval pins only the reviewed release. See [publishing](docs/publishing.md).
 Neither workflow changes SDK runtime behavior or activates recovery service.
 
 Coordinate: `app.luximio:luximio-links-android:0.1.0-rc.1`.
